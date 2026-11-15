@@ -1,0 +1,46 @@
+<div class="header__catalog">
+    <div class="header__catalog-button"><div class="burger"></div><p class="header__catalog-button__text">{{ text_category }}</p></div>
+    {% if categories %}
+      <div class="header__catalog-list menu">
+        <div class="container">
+          <nav class="menu__inner">
+            {% set without__child = false %}
+            {% for category in categories %}
+              {% if category.children %}
+                <div class="menu__category menu__category--childs">
+                  <div class="menu__item-parent" class="link--underline"><a href="{{ category.href }}">{{ category.name }}</a></div>
+                  {% if category.children %}
+                  <ul class="menu__list">
+                    {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+                      {% for child in children %}
+                        <li class="menu__item-child"><a href="{{ child.href }}" class="link--underline">{{ child.name }}</a></li>
+                      {% endfor %}
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+                <div class="menu__line"></div>
+              {% else %}
+                {% set without__child = true %}
+              {% endif %}
+            {% endfor %}
+
+            {% if without__child %}
+              <div class="menu__category">
+                {% for category in categories %}
+                  {% if category.children %}
+              
+                  {% else %}
+                    <div class="menu__item-parent"><a href="{{ category.href }}" class="link--underline">{{ category.name }}</a></div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="header__menu--mobile">
+              {{ list_header__menu_mobile }}
+            </div>
+          </nav>
+        </div>
+      </div>
+    {% endif %}
+</div>

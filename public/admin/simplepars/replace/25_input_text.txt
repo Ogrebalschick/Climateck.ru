@@ -1,0 +1,48 @@
+!========== Повторение [№1] ========= Разделитель [{csvnc}] ========== !
+
+
+                                <span class="product-props-list__title">
+                                                                            <img class="ico-product-props" src="/upload/uf/dcf/BOSCH_Icons_Wifi_Daichi_B_23.svg">
+                                                                        <span>Wi-Fi контроллер (опция) </span>
+                                </span>
+                                    <span class="product-props-list__descr">
+                                    Возможность удаленного управления системой кондиционирования с мобильного устройства и/или интеграция к системам умный дом, таким как Алиса (Yandex), Маруся (VK), Салют (Сбер).                                </span>
+                                </div>
+                                                                
+
+!========== Повторение [№2] ========= Разделитель [{csvnc}] ========== !
+
+
+                                <span class="product-props-list__title">
+                                                                            <img class="ico-product-props" src="/upload/uf/7ad/BOSCH_Icons_Samodiagnostika_V_12.svg">
+                                                                        <span>Самодиагностика</span>
+                                </span>
+                                    <span class="product-props-list__descr">
+                                    Функция автоматического поиска неисправностей с целью предотвращения выхода системы из строя                                </span>
+                                </div>
+                                                                
+
+!========== Повторение [№3] ========= Разделитель [{csvnc}] ========== !
+
+
+                                <span class="product-props-list__title">
+                                                                            <img class="ico-product-props" src="/upload/uf/db3/BOSCH_Icons_Filtr-vysokoy-stepeni-plotnosti_B_32.svg">
+                                                                        <span>Фильтр высокой степени плотности </span>
+                                </span>
+                                    <span class="product-props-list__descr">
+                                    Фильтр со специальным размером ячейки, улавливающий большее количество мельчайших частиц пыли и различных аллергенов, чем фильтры со стандартным размером ячейки.                                </span>
+                                </div>
+                                                                
+
+!========== Повторение [№4] ========= Разделитель [{csvnc}] ========== !
+
+
+                                <span class="product-props-list__title">
+                                                                            <img class="ico-product-props" src="/upload/uf/673/BOSCH_Icons_Osushenie_B_45.svg">
+                                                                        <span>Осушение</span>
+                                </span>
+                                    <span class="product-props-list__descr">
+                                    Функция предназначена для отвода излишек влаги из помещения без существенного понижения температуры.                                </span>
+                                </div>
+                                                                
+

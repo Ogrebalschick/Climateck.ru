@@ -1,0 +1,128 @@
+                                                    &lt;h2&gt;Основные характеристики&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Группа товара&lt;/span&gt;&lt;span&gt;Бытовые сплит-системы&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Для помещения площадью, м&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;&lt;span&gt;50&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Доработка&lt;/span&gt;&lt;span&gt;Без доработки&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Наименование&lt;/span&gt;&lt;span&gt;Бытовой кондиционер&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Облачные кондиционеры&lt;/span&gt;&lt;span&gt;Нет&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Основные режимы работы&lt;/span&gt;&lt;span&gt;Охлаждение/нагрев&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Серия&lt;/span&gt;&lt;span&gt;FTXM Perfera&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Текстура пластика&lt;/span&gt;&lt;span&gt;Матовый&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Технология работы&lt;/span&gt;&lt;span&gt;Inverter&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Тип внутреннего блока&lt;/span&gt;&lt;span&gt;Настенный&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Тип товара&lt;/span&gt;&lt;span&gt;Комплект&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Хладагент&lt;/span&gt;&lt;span&gt;R32&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Цвет&lt;/span&gt;&lt;span&gt;Белый&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                                    &lt;h2&gt;Система фильтрации&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Flash streamer&lt;/span&gt;&lt;span&gt;Нет&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Титано-аппатитовый фильтр&lt;/span&gt;&lt;span&gt;Нет&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Фильтр предварительной очистки&lt;/span&gt;&lt;span&gt;Нет&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                                    &lt;h2&gt;Производительность&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;P design (охлаждение/нагрев)&lt;/span&gt;&lt;span&gt;5/4,6&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Годовое энергопотребление (охлаждение/нагрев), кВт&lt;/span&gt;&lt;span&gt;236/1368&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Годовое энергопотребление, кВт&lt;/span&gt;&lt;span&gt;680&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Класс сезонной энергоэффективности, обогрев&lt;/span&gt;&lt;span&gt;A++&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Класс сезонной энергоэффективности, охл.&lt;/span&gt;&lt;span&gt;A++&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Класс энергоэффективности, обогрев&lt;/span&gt;&lt;span&gt;A&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Класс энергоэффективности, охлаждение&lt;/span&gt;&lt;span&gt;A&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Коэффициент сезонной энергоэффективности, обогрев, SCOP&lt;/span&gt;&lt;span&gt;4.71&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Коэффициент сезонной энергоэффективности, охл., SEER&lt;/span&gt;&lt;span&gt;7.41&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Коэффициент энергоэффективности, обогрев, COP&lt;/span&gt;&lt;span&gt;4&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Коэффициент энергоэффективности, охл., EER&lt;/span&gt;&lt;span&gt;3.68&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, нагрев, кВт&lt;/span&gt;&lt;span&gt;~1,45~&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, нагрев, кВт, ном.&lt;/span&gt;&lt;span&gt;1.45&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, охлаждение, кВт&lt;/span&gt;&lt;span&gt;~1,36~&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, охлаждение, кВт, ном.&lt;/span&gt;&lt;span&gt;1.36&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Теплопроизводительность, кВт&lt;/span&gt;&lt;span&gt;7,7~5,8~1,7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Теплопроизводительность, кВт, макс.&lt;/span&gt;&lt;span&gt;7,7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Теплопроизводительность, кВт, ном.&lt;/span&gt;&lt;span&gt;5.8&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Холодопроизводительность, кВт&lt;/span&gt;&lt;span&gt;6~5~1,7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Холодопроизводительность, кВт, макс.&lt;/span&gt;&lt;span&gt;6&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Холодопроизводительность, кВт, ном.&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Электропитание, ф / В / Гц&lt;/span&gt;&lt;span&gt;1~, 220-240 В, 50 Гц&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                                    &lt;h2&gt;Технические характеристики&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Диапазон рабочих температур, нагрев, °C&lt;/span&gt;&lt;span&gt;-20~24&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Диапазон рабочих температур, охлаждение, °C&lt;/span&gt;&lt;span&gt;-10~50&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Расход воздуха, ВБ, охлаждение, м&lt;sup&gt;3&lt;/sup&gt;/ч&lt;/span&gt;&lt;span&gt;948/684/498&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Уровень звукового давления, ВБ, охлаждение, дБ(А)&lt;/span&gt;&lt;span&gt;44/36/27&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Уровень звукового давления, НБ, охлаждение,  дБ(А)&lt;/span&gt;&lt;span&gt;48&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                                    &lt;h2&gt;Трубопровод хладагента&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Максимальная длина трассы, м&lt;/span&gt;&lt;span&gt;30&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Максимальный перепад высот, м&lt;/span&gt;&lt;span&gt;20&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Трубопровод со стороны газа, Ø, мм&lt;/span&gt;&lt;span&gt;12.7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Трубопровод со стороны жидкости, Ø, мм&lt;/span&gt;&lt;span&gt;6.4&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                                    &lt;h2&gt;Габариты&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Вес нетто, ВБ, кг&lt;/span&gt;&lt;span&gt;14.5&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Вес нетто, НБ, кг&lt;/span&gt;&lt;span&gt;49&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Габариты, ВБ, ШхГхВ, мм&lt;/span&gt;&lt;span&gt;998x292x299&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Габариты, НБ, ШхГхВ, мм&lt;/span&gt;&lt;span&gt;870x373x734&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                                    &lt;h2&gt;Дополнительные сведения&lt;/h2&gt;
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Срок эксплуатации&lt;/span&gt;&lt;span&gt;10 лет&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Страна изготовитель&lt;/span&gt;&lt;span&gt;Чехия/Турция&lt;/span&gt;&lt;/li&gt;
+
+                                                            &lt;/ul&gt;
+                                            

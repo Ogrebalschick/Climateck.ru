@@ -1,0 +1,30 @@
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Годовое энергопотребление, кВт&lt;/span&gt;&lt;span&gt;957.5&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Класс энергоэффективности, обогрев&lt;/span&gt;&lt;span&gt;A&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Класс энергоэффективности, охлаждение&lt;/span&gt;&lt;span&gt;A&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Коэффициент энергоэффективности, обогрев, COP&lt;/span&gt;&lt;span&gt;3.61&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Коэффициент энергоэффективности, охл., EER&lt;/span&gt;&lt;span&gt;3.21&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, нагрев, кВт&lt;/span&gt;&lt;span&gt;1,86&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, нагрев, кВт, ном.&lt;/span&gt;&lt;span&gt;1.86&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, охлаждение, кВт&lt;/span&gt;&lt;span&gt;1,92&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Потребляемая мощность, охлаждение, кВт, ном.&lt;/span&gt;&lt;span&gt;1.92&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Теплопроизводительность, кВт&lt;/span&gt;&lt;span&gt;6,7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Теплопроизводительность, кВт, ном.&lt;/span&gt;&lt;span&gt;6.7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Холодопроизводительность, кВт&lt;/span&gt;&lt;span&gt;6,2&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Холодопроизводительность, кВт, ном.&lt;/span&gt;&lt;span&gt;6.2&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Электропитание, ф / В / Гц&lt;/span&gt;&lt;span&gt;1~, 220-240 В, 50 Гц&lt;/span&gt;&lt;/li&gt;
+
+                                                            

@@ -1,0 +1,88 @@
+<div class="header__catalog">
+  <div class="header__catalog-button">
+    <div class="burger"></div>
+    <p class="header__catalog-button__text">{{ text_category }}</p>
+  </div>
+  {% if categories %}
+  <div class="header__catalog-list menu">
+    <div class="container">
+      <div class="menu__inner">
+        {% macro render_menu(items, level = 1) %}
+        <ul class="menu__level menu__level-{{ level }}">
+          {% for item in items %}
+          {# Определяем наличие дочерних элементов в зависимости от уровня #}
+          {% set has_children = false %}
+          {% if level == 1 and item.children is defined and item.children|length > 0 %}
+          {% set has_children = true %}
+          {% set children_items = item.children %}
+          {% elseif level > 1 and item.subchildren is defined and item.subchildren|length > 0 %}
+          {% set has_children = true %}
+          {% set children_items = item.subchildren %}
+          {% endif %}
+
+          <li class="menu__item {% if has_children %}has-children{% endif %}">
+            <a href="{{ item.href }}" class="menu__link">{{ item.name }}</a>
+            {% if has_children %}
+            <button class="menu__toggle-submenu" aria-label="Показать подкатегории">▶</button>
+            {{ _self.render_menu(children_items, level + 1) }}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endmacro %}
+        {{ _self.render_menu(categories, 1) }}
+
+        {# Дополнительный блок для мобильного меню (если требуется) #}
+        <div class="header__menu--mobile">
+          {{ list_header__menu_mobile }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+<script>
+  $(function() {
+    var $window = $(window);
+    var $catalog = $('.header__catalog');
+    var $toggleSubmenu = $('.menu__toggle-submenu');
+
+    // Проверка ширины экрана
+    function isMobile() {
+      return $window.width() <= 768;
+    }
+
+    // Клик по кнопке «Каталог» (только для мобильных)
+    $('.header__catalog-button').on('click', function(e) {
+      if (isMobile()) {
+        e.preventDefault();
+        $catalog.toggleClass('open');
+      }
+    });
+
+    // Клик по стрелке подменю (только для мобильных)
+    $(document).on('click', '.menu__toggle-submenu', function(e) {
+      if (!isMobile()) return;
+
+      e.preventDefault();
+      e.stopPropagation(); // предотвращаем переход по ссылке
+      var $li = $(this).closest('.menu__item');
+      $li.toggleClass('open');
+    });
+
+    // Закрытие меню при клике вне его области (для мобильных)
+    $(document).on('click', function(e) {
+      if (isMobile() && $catalog.hasClass('open') && !$(e.target).closest('.header__catalog').length) {
+        $catalog.removeClass('open');
+      }
+    });
+
+    // При ресайзе сбрасываем классы open, если перешли на десктоп
+    $window.on('resize', function() {
+      if (!isMobile()) {
+        $catalog.removeClass('open');
+        $('.menu__item.open').removeClass('open');
+      }
+    });
+  });
+</script>

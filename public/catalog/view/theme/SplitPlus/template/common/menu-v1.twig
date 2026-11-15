@@ -1,0 +1,225 @@
+<div class="header__catalog">
+    <div class="header__catalog-button">
+        <div class="burger"></div>
+        <p class="header__catalog-button__text">{{ text_category }}</p>
+    </div>
+    {% if categories %}
+    <div class="header__catalog-list menu">
+        <div class="container">
+            <div class="menu__inner">
+                <!-- START: Левая колонка в меню с главными категориями -->
+                <nav class="menu-left">
+                    <!-- Инициализируем without__child для проверки на наличие потомков. false - потомки есть. -->
+                    {% set without__child = false %}
+                    <!-- Инициализируем счётчик row. У родителей и потомков один row. Надо для того, чтобы меню раскрывалось при наведении на соответсвующий пункт -->
+                    {% set row = 0 %}
+                    {% for category in categories %}
+                    {% if category.children %}
+                    {% set row = row + 1 %}
+                    <div class="menu__category menu__category--childs">
+                        <div class="menu__item-parent" data-row="{{ row }}"><a href="{{ category.href }}">{{ category.name }}</a></div>
+                    </div>
+                    <div class="menu__line"></div>
+                    {% else %}
+                    {% set without__child = true %}
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if without__child %}
+                    <div class="menu__category">
+                        {% for category in categories %}
+                        {% if category.children %}
+
+                        {% else %}
+                        <div class="menu__item-parent"><a href="{{ category.href }}" class="link--underline">{{ category.name }}</a></div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="header__menu--mobile">
+                        {{ list_header__menu_mobile }}
+                    </div>
+                </nav>
+                <!-- END: Левая колонка в меню с главными категориями -->
+                <div class="menu-right">
+                    {% set row = 0 %}
+                    {% for category in categories %}
+                    {% if category.children %}
+                    {% set row = row + 1 %}
+                    <ul class="menu__list" data-row="{{ row }}">
+                        {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+                        {% for child in children %}
+                        <ul class="menu__item-children">
+                            <li class="menu__item-child"><a href="{{ child.href }}" class="link--underline">{{ child.name }}</a></li>
+                            {% if child.subchildren %}
+                            <ul class="menu__item-subchildren">
+                                {% for subchild in child.subchildren %}
+                                <li class="menu__item-subchild"><a href="{{ subchild.href }}">{{ subchild.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </ul>
+                        {% endfor %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    $(function() {
+        $('.menu-right .menu__list:first-child').addClass('active');
+
+        // Подсветка соответствующей правой колонки при наведении на левую
+        $('.menu-left').on('mouseenter', '.menu__item-parent[data-row]', function() {
+            $('.menu__item-parent').removeClass('active')
+            $(this).addClass('active')
+            const row = $(this).data('row'); // число/строка типа 1,2,3...
+            $('.menu__list').removeClass('active');
+            $('.menu__list[data-row="' + row + '"]').addClass('active');
+        });
+    });
+</script>
+
+<style>
+    /* START: МЕНЮ КАТАЛОГ (Тип v1, как в DAICHI ) */
+    .menu {
+        position: absolute;
+        left: -100%;
+        transition: 0.5s;
+        width: 100%;
+        z-index: 3;
+        background: #fff;
+        margin-top: 20px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu__line {
+        height: 1px;
+        display: block;
+        background: #E6E6EF;
+    }
+
+    .menu__inner {
+        display: flex;
+        gap: 40px;
+        background: #fff;
+        border: 1px solid #E6E6EF;
+        border-radius: 5px;
+        padding: 40px;
+    }
+
+    .menu__category a {
+        padding: 15px 10px;
+        width: 100%;
+        transition: .1s;
+    }
+
+    .menuf__category a:hover {
+        background: #ccc;
+    }
+
+    .menu__item-parent.active a {
+        color: #2858FF;
+        background: #ccc;
+    }
+
+    .menu__item-parent {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .menu__item-parent a {
+        font-size: 24px;
+        display: inline-block;
+        color: #1A1A1A;
+    }
+
+    .menu-right {
+        width: 100%;
+    }
+
+    .menu__list {
+        display: none;
+    }
+
+    .menu__list.active {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 25px 0;
+        overflow-y: auto;
+        max-height: 500px;
+    }
+
+    .menu__item-child a {
+        color: #1A1A1A;
+        font-weight: 700;
+    }
+
+
+    .menu__item-children {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 49%;
+    }
+
+    .menu__item-child {
+        font-size: 16px;
+    }
+
+    .menu__item-subchildren {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu__item-subchild a {
+        color: #4a4a4a;
+    }
+
+    @media (max-width: 420px) {
+        .menu__inner {
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu__category {
+            width: 100%;
+            gap: 0;
+        }
+
+        .menu__category--childs .menu__item-parent::after {
+            content: '⌄';
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .menu__category--childs .menu__item-parent:hover::after {
+            transform: rotate(180deg);
+        }
+
+        .menu__list {
+            min-height: auto;
+            max-height: none;
+            padding-bottom: 25px;
+        }
+
+        .menu__item-parent {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 25px;
+        }
+    }
+
+    /* END: МЕНЮ КАТАЛОГ */
+</style>

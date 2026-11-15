@@ -1,0 +1,6 @@
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Срок эксплуатации&lt;/span&gt;&lt;span&gt;7 лет&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Страна изготовитель&lt;/span&gt;&lt;span&gt;Китай&lt;/span&gt;&lt;/li&gt;
+
+                                                            

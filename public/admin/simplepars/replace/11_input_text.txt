@@ -1,0 +1,26 @@
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Группа товара&lt;/span&gt;&lt;span&gt;Бытовые сплит-системы&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Для помещения площадью, м&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;&lt;span&gt;50&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Наименование&lt;/span&gt;&lt;span&gt;Бытовой кондиционер&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Облачные кондиционеры&lt;/span&gt;&lt;span&gt;Нет&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Основные режимы работы&lt;/span&gt;&lt;span&gt;Охлаждение/нагрев&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Серия&lt;/span&gt;&lt;span&gt;Climate Line 2000&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Текстура пластика&lt;/span&gt;&lt;span&gt;Глянцевый&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Технология работы&lt;/span&gt;&lt;span&gt;On/Off&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Тип внутреннего блока&lt;/span&gt;&lt;span&gt;Настенный&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Тип товара&lt;/span&gt;&lt;span&gt;Комплект&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Хладагент&lt;/span&gt;&lt;span&gt;R410A&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Цвет&lt;/span&gt;&lt;span&gt;Белый&lt;/span&gt;&lt;/li&gt;
+
+                                                            

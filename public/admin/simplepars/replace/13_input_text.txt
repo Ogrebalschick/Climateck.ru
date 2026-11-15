@@ -1,0 +1,10 @@
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Диапазон рабочих температур, нагрев, °C&lt;/span&gt;&lt;span&gt;-7~24&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Диапазон рабочих температур, охлаждение, °C&lt;/span&gt;&lt;span&gt;18~43&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Расход воздуха, ВБ, охлаждение, м&lt;sup&gt;3&lt;/sup&gt;/ч&lt;/span&gt;&lt;span&gt;900/600&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Уровень звукового давления, ВБ, охлаждение, дБ(А)&lt;/span&gt;&lt;span&gt;49/37&lt;/span&gt;&lt;/li&gt;
+
+                                                            

@@ -1,0 +1,391 @@
+{{ header }}
+<style>
+    .product-images__main {
+        overflow: hidden;
+        cursor: zoom-in;
+        position: relative;
+    }
+
+    .product-images__main img {
+        transition: transform 0.1s ease;
+        transform-origin: center;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-images__main.zoomed img {
+        transform: scale(2.5);
+        cursor: zoom-out;
+    }
+</style>
+<main>
+    <div class="product">
+        <div class="container">
+            <div class="product__inner">
+                <div class="product__header">
+                    <div class="breadcrumbs">
+                        {% for breadcrumb in breadcrumbs %}
+                        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+                        {% if not loop.last %} &gt; {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h1 class="product__title">{{ heading_title }}</h1>
+                    <div class="product-subinfo">
+                        <div class="product-subinfo__item">{{ sku|default(model) }}</div>
+                        <div class="product-subinfo__item">
+                            {% if rating %}
+                            {% for i in 1..5 %}
+                            {% if rating >= i %}
+                            ★
+                            {% else %}
+                            ☆
+                            {% endif %}
+                            {% endfor %}
+                            {% else %}
+                            ★★★★★
+                            {% endif %}
+                        </div>
+                        <div class="product-subinfo__item"><button type="button" id="wishlist" class="btn-link" data-product-id="{{ product_id }}">Bookmark</button></div>
+                        <div class="product-subinfo__item"><button type="button" id="compare" class="btn-link" data-product-id="{{ product_id }}">Compare</button></div>
+                    </div>
+                </div>
+                <div class="product__main">
+                    <section class="product-images">
+                        <div class="product-images__main" id="product-images-main">
+                            <img src="{{ image.big|default(image.popup|default(thumb)) }}" alt="{{ heading_title }}" loading="lazy">
+                        </div>
+                        <ul class="product-images__subimages">
+                            {% for image in images %}
+                            <li class="product-images__subitem">
+                                <img src="{{ image.big|default(image.popup) }}" alt="{{ heading_title }}" loading="lazy">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section class="product-info">
+                        <div class="product-consultation animation--gradient" popup-btn="consultation">
+                            <div class="product-consultation__inner">
+                                <div class="product-consultation__image"><img
+                                        src="https://tecl.ru/wa-data/public/shop/themes/tecl/assets/img/manager2.svg"
+                                        alt=""></div>
+                                <div class="product-consultation__info">
+                                    <b class="product-consultation__title">Консультация инженера</b>
+                                    <p class="product-consultation__text">Подберем модель и рассчитаем монтаж <b> ❱</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-options">
+                            {% for option in options %}
+                            <div class="product-option">
+                                <h3 class="product-option__title">{{ option.name }}</h3>
+                                <ul class="product-option__list">
+                                    {% for value in option.product_option_value %}
+                                    <li class="product-option__item animation--gradient {% if value.selected %}active{% endif %}">
+                                        <div>
+                                            <a href="#" data-option-id="{{ option.product_option_id }}" data-value-id="{{ value.product_option_value_id }}">{{ value.name }}</a>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <ul class="product-characteristics">
+                            <div class="product-characteristics__inner">
+                                {% set characteristic_count = 0 %}
+                                {% for attribute_group in attribute_groups %}
+                                {% for attribute in attribute_group.attribute %}
+                                {% if characteristic_count < 5 %}
+                                <li class="product-characteristic">
+                                    <div class="product-characteristic__key">{{ attribute.name }}</div>
+                                    <div class="separator"></div>
+                                    <div class="product-characteristic__val">{{ attribute.text }}</div>
+                                </li>
+                                {% set characteristic_count = characteristic_count + 1 %}
+                                {% endif %}
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                            <a href="#" class="scroll-to-tabs">{{ text_all_attributes }} ▽</a>
+                        </ul>
+                    </section>
+                    <section class="product-right animation--gradient">
+                        <div class="product-order">
+                            <div class="product-order__inner">
+                                <div class="product-order__main">
+                                    <div class="product-order__prices">
+                                        <span class="product-order__price">{{ price }}</span>
+                                        {% if special %}
+                                        <span class="product-order__price--old">{{ special }}</span>
+                                        {% endif %}
+                                        <div class="found-it-cheaper">{{ text_found_cheaper }}</div>
+                                    </div>
+                                    <div class="product-order__buttons">
+                                        <button class="product-order__button" id="button-quick-order">{{ button_quick_order }}</button>
+                                        <button class="product-order__button" id="button-cart">{{ button_cart }}</button>
+                                    </div>
+                                </div>
+                                <hr align="center" width="100%" size="1" color="#f5f5f5" />
+                                <div class="product-order__delivery">
+                                    <div class="product-order__delivery-your-city">Населенный пункт: Москва ▽</div>
+                                    <ul class="product-order__delivery-prices">
+                                        <li class="product-order__delivery-item">
+                                            <div class="product-order__delivery-item-title">
+                                                <div>Пункты выдачи</div>
+                                                <div>От 390 ₽, 2-3 дня <b> ❱</b></div>
+                                            </div>
+                                            <div class="product-order__delivery-item-text">
+                                                Доставим заказ до терминала любой транспортной компании, точек
+                                                самовывоза
+                                                или постаматов всех операторов. Подробности на странице Доставка.
+                                            </div>
+                                        </li>
+                                        <li class="product-order__delivery-item">
+                                            <div class="product-order__delivery-item-title">
+                                                <div>Доставка</div>
+                                                <div>От 500 ₽, 2-4 дня <b> ❱</b></div>
+                                            </div>
+                                            <div class="product-order__delivery-item-text">Доставим заказ до вашего
+                                                адреса
+                                                собственной курьерской службой или при помощи транспортных компаний.
+                                                Подробнее на странице Доставка.</div>
+                                        </li>
+                                        <li class="product-order__delivery-item">
+                                            <div class="product-order__delivery-item-title">
+                                                <div>Оплата</div>
+                                                <div>5 способов, на выбор <b> ❱</b></div>
+                                            </div>
+                                            <div class="product-order__delivery-item-text">Мы принимаем оплату
+                                                наличными,
+                                                банковскими картами на сайте и через терминал, банковским переводом и
+                                                оплату
+                                                по счету от юридических лиц. Подробнее на странице Оплата</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="product__tabs">
+                    <div class="product__tabs-all" id="product__tabs-all">
+                        {% if attribute %}
+                        <div class="product__tab-name active" data-product-tab="1">{{ tab_attribute }}</div>
+                        {% endif %}
+                        {% if description %}
+                        <div class="product__tab-name" data-product-tab="2">{{ tab_description }}</div>
+                        {% endif %}
+                        {% if manufacturer %}
+                        <div class="product__tab-name" data-product-tab="3">{{ tab_manufacturer }}</div>
+                        {% endif %}
+                        {% if warranty %}
+                        <div class="product__tab-name" data-product-tab="4">{{ tab_warranty }}</div>
+                        {% endif %}
+                        {% if reviews %}
+                        <div class="product__tab-name" data-product-tab="5">{{ tab_review }}</div>
+                        {% endif %}
+                        {% if delivery_info %}
+                        <div class="product__tab-name" data-product-tab="6">Доставка и оплата</div>
+                        {% endif %}
+                    </div>
+                    <div class="product__tabs-contents">
+                        {% if attribute %}
+                        <div class="product__tab-content active" data-product-tab="1">
+                            {{ attribute }}
+                        </div>
+                        {% endif %}
+                        {% if description %}
+                        <div class="product__tab-content" data-product-tab="2">
+                            {{ description }}
+                        </div>
+                        {% endif %}
+                        {% if manufacturer %}
+                        <div class="product__tab-content" data-product-tab="3">
+                            {{ manufacturer }}
+                        </div>
+                        {% endif %}
+                        {% if warranty %}
+                        <div class="product__tab-content" data-product-tab="4">
+                            {{ warranty }}
+                        </div>
+                        {% endif %}
+                        {% if reviews %}
+                        <div class="product__tab-content" data-product-tab="5">
+                            {% include 'default/template/product/review.twig' %}
+                        </div>
+                        {% endif %}
+                        {% if delivery_info %}
+                        <div class="product__tab-content" data-product-tab="6">{{ delivery_info }}</div>
+                        {% endif %}
+                        <div class="product-ask-question animation--gradient">
+                            <div class="product-ask-question__inner">
+                                <h3 class="product-ask-question__title">Задать вопрос эксперту</h3>
+                                <div class="product-ask-question__subtitle">
+                                    <div class="product-ask-question__worker">Инженер отдела продаж </div>
+                                    <div class="product-ask-question__reviews">⭐⭐⭐⭐⭐</div>
+                                </div>
+                                <div class="product-ask-question__info">
+                                    <div class="product-ask-question__name">Булычев Роман</div>
+                                    <div class="product-ask-question__reviews-count">8 отзывов</div>
+                                </div>
+                                <div class="product-ask-question__image"><img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSA1zygA3rubv-VK0DrVcQ02Po79kJhXo_A&s"
+                                        alt=""></div>
+                                <div class="product-ask-question__button">Задать вопрос</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <section class="form-questions">
+        <div class="container">
+            <div class="form-questions__inner">
+                <div class="form-questions__header">
+                    <h2 class="form-questions__title">Возникли вопросы?</h2>
+                    <p class="form-questions__desc">Заполните форму ниже, и наши специалисты свяжутся с вами в ближайшее
+                        время и помогут решить возникший вопрос.</p>
+                </div>
+
+
+                <form class="form-questions__form" onsubmit="handleSubmit(event)" novalidate>
+                    <div class="form-questions__row">
+                        <div class="form-questions__field">
+                            <label class="form-questions__label" for="name">Ваше имя<span>*</span></label>
+                            <input class="form-questions__input" id="name" type="text" placeholder="Иван Иванов"
+                                required />
+                        </div>
+
+
+                        <div class="form-questions__field">
+                            <label class="form-questions__label" for="phone">Контактный телефон<span>*</span></label>
+                            <input class="form-questions__input" id="phone" type="tel" placeholder="+7 (900) 000-00-00"
+                                required />
+                        </div>
+
+
+                        <div class="form-questions__field form-questions__field--submit">
+                            <button class="form-questions__btn" type="submit">Отправить</button>
+                        </div>
+                    </div>
+
+
+                    <label class="form-questions__checkbox">
+                        <input class="form-questions__checkbox-input" type="checkbox" id="agree" required />
+                        <span class="form-questions__checkbox-text">Я соглашаюсь с политикой обработки персональных
+                            данных</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+{{ footer }}
+
+<script>
+    // Wishlist button
+    const wishlistBtn = document.getElementById('wishlist');
+    if (wishlistBtn) {
+        wishlistBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.getAttribute('data-product-id');
+            fetch('index.php?route=product/product/addWishlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: 'product_id=' + productId
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.success);
+                        this.classList.toggle('active');
+                        this.textContent = this.classList.contains('active') ? 'Bookmarked' : 'Bookmark';
+                    } else if (data.error) {
+                        alert(data.error);
+                    }
+                }).catch(error => console.error('Error:', error));
+        });
+    }
+
+    // Compare button
+    const compareBtn = document.getElementById('compare');
+    if (compareBtn) {
+        compareBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.getAttribute('data-product-id');
+            fetch('index.php?route=product/product/addCompare', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: 'product_id=' + productId
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.success);
+                        this.classList.toggle('active');
+                        this.textContent = this.classList.contains('active') ? 'Compared' : 'Compare';
+                    } else if (data.error) {
+                        alert(data.error);
+                    }
+                }).catch(error => console.error('Error:', error));
+        })
+    }
+
+    // Image zoom and subimage switching
+    const mainImageContainer = document.getElementById('product-images-main');
+    if (mainImageContainer) {
+        const mainImage = mainImageContainer.querySelector('img');
+
+        mainImageContainer.addEventListener('mousemove', function(e) {
+            if (!mainImageContainer.classList.contains('zoomed')) return;
+            const rect = mainImageContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const percentX = (x / rect.width) * 100;
+            const percentY = (y / rect.height) * 100;
+            mainImage.style.transformOrigin = percentX + '% ' + percentY + '%';
+        });
+
+        mainImageContainer.addEventListener('mouseenter', function() {
+            mainImageContainer.classList.add('zoomed');
+        });
+
+        mainImageContainer.addEventListener('mouseleave', function() {
+            mainImageContainer.classList.remove('zoomed');
+            mainImage.style.transformOrigin = 'center';
+        });
+
+        document.querySelectorAll('.product-images__subitem').forEach(item => {
+            item.addEventListener('mouseover', function() {
+                const subImage = this.querySelector('img');
+                if (subImage) {
+                    mainImage.src = subImage.src;
+                    mainImage.alt = subImage.alt;
+                    mainImageContainer.classList.remove('zoomed');
+                }
+            });
+        });
+    }
+
+    // Scroll to tabs button
+    const scrollToTabsBtn = document.querySelector('.scroll-to-tabs');
+    if (scrollToTabsBtn) {
+        scrollToTabsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tabsSection = document.getElementById('product__tabs-all');
+            if (tabsSection) {
+                tabsSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+</script>

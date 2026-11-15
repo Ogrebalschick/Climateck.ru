@@ -1,0 +1,10 @@
+                            &lt;ul class=&quot;product-feature-list&quot;&gt;
+                                                                    &lt;li&gt;&lt;span&gt;Вес нетто, ВБ, кг&lt;/span&gt;&lt;span&gt;10.7&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Вес нетто, НБ, кг&lt;/span&gt;&lt;span&gt;29.3&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Габариты, ВБ, ШхГхВ, мм&lt;/span&gt;&lt;span&gt;940x193x325&lt;/span&gt;&lt;/li&gt;
+
+                                                                    &lt;li&gt;&lt;span&gt;Габариты, НБ, ШхГхВ, мм&lt;/span&gt;&lt;span&gt;800(+70)x554x333&lt;/span&gt;&lt;/li&gt;
+
+                                                            

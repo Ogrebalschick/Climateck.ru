@@ -1,0 +1,14 @@
+<section class="categories">
+  <div class="container">
+    <ul class="categories__inner">
+      {% for category in categories %}
+        <li class="categories__item">
+          <a href="{{ category.href }}">
+            <div class="categories__item-image"><img src="{{ category.image }}" alt="{{ category.name }}"></div>
+            <div class="categories__item-title">{{ category.name }}</div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
