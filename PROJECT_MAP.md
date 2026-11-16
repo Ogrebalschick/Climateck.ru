@@ -6,7 +6,7 @@
 
 Целевая структура страниц — `SITE_ARCHITECTURE.md`. Стандарт оформления — `DESIGN_SYSTEM.md`. Текущая вёрстка SplitPlus этим документам ещё не приведена.
 
-Статический макет главной, шапки, подвала и карточки товара: `_mockup/` (`index.html`, `css/tokens.css`, `css/components.css`, `css/home.css`, `js/mockup.js`). Папка в `.gitignore`, в тему OpenCart не подключена. Открывать как файл или через локальный сервер из корня проекта: `/_mockup/index.html`.
+Статический макет витрины: `_mockup/`. Главная — `index.html`, `css/home.css`. Категория — `category.html`, `css/category.css`, `js/category.js`: сайдбар в логике OCFilter, чипы площади, сетка и список, пустая выдача. Общие токены, шапка, подвал и карточка — `css/tokens.css`, `css/components.css`, `js/mockup.js`. Папка в `.gitignore`, в тему OpenCart не подключена. Открывать через локальный сервер из корня проекта: `/_mockup/index.html`, `/_mockup/category.html`.
 
 ## Общая информация
 
@@ -116,3 +116,4 @@
 | 2026-11-15 | Подготовка к GitHub: `.gitignore`, шаблоны конфигов без доступов к БД. Рабочие `config.php` и кэш в репозиторий не входят | `.gitignore`, `public/config-dist.php`, `public/admin/config-dist.php`, `PROJECT_MAP.md` |
 | 2026-11-16 | Задана целевая структура страниц и дизайн-система витрины. Код темы не менялся | `SITE_ARCHITECTURE.md`, `DESIGN_SYSTEM.md`, `.cursorrules`, `PROJECT_MAP.md` |
 | 2026-11-16 | Собран изолированный макет главной, шапки, подвала и карточки товара. Тема SplitPlus не менялась | `_mockup/index.html`, `_mockup/css/tokens.css`, `_mockup/css/components.css`, `_mockup/css/home.css`, `_mockup/js/mockup.js`, `.gitignore`, `PROJECT_MAP.md` |
+| 2026-11-16 | Собран макет страницы категории: фильтр в логике OCFilter, чипы площади, сетка/список, пустая выдача. Тема SplitPlus не менялась | `_mockup/category.html`, `_mockup/css/category.css`, `_mockup/js/category.js`, `PROJECT_MAP.md` |
