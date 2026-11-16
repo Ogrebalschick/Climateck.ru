@@ -44,3 +44,6 @@ public/admin/simplepars/cache_page/
 /image/cache/
 
 # Kept under version control on purpose: PROJECT_MAP.md, .cursorrules
+
+# Static homepage mockup, not part of the OpenCart theme
+_mockup/

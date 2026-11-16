@@ -4,6 +4,10 @@
 
 Документ-корень сайта: `public/`. Локальный адрес: `http://climateck.local/`. База `climateck`, префикс таблиц `oc_`.
 
+Целевая структура страниц — `SITE_ARCHITECTURE.md`. Стандарт оформления — `DESIGN_SYSTEM.md`. Текущая вёрстка SplitPlus этим документам ещё не приведена.
+
+Статический макет главной, шапки, подвала и карточки товара: `_mockup/` (`index.html`, `css/tokens.css`, `css/components.css`, `css/home.css`, `js/mockup.js`). Папка в `.gitignore`, в тему OpenCart не подключена. Открывать как файл или через локальный сервер из корня проекта: `/_mockup/index.html`.
+
 ## Общая информация
 
 | | |
@@ -110,3 +114,5 @@
 | --- | --- | --- |
 | 2026-11-15 | Создан справочник проекта. Код витрины не менялся | `PROJECT_MAP.md` |
 | 2026-11-15 | Подготовка к GitHub: `.gitignore`, шаблоны конфигов без доступов к БД. Рабочие `config.php` и кэш в репозиторий не входят | `.gitignore`, `public/config-dist.php`, `public/admin/config-dist.php`, `PROJECT_MAP.md` |
+| 2026-11-16 | Задана целевая структура страниц и дизайн-система витрины. Код темы не менялся | `SITE_ARCHITECTURE.md`, `DESIGN_SYSTEM.md`, `.cursorrules`, `PROJECT_MAP.md` |
+| 2026-11-16 | Собран изолированный макет главной, шапки, подвала и карточки товара. Тема SplitPlus не менялась | `_mockup/index.html`, `_mockup/css/tokens.css`, `_mockup/css/components.css`, `_mockup/css/home.css`, `_mockup/js/mockup.js`, `.gitignore`, `PROJECT_MAP.md` |
